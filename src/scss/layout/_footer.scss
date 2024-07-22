@@ -78,6 +78,16 @@
   display: flex;
   align-items: center;
   gap: 22px;
+
+  padding-top: 6px;
+  padding-bottom: 6px;
+  @include font(400, 15px, calc(20px / 15px));
+  color: var(--main-text-color);
+  &:hover,
+  &:focus {
+    color: var(--secondary-accent-color);
+  }
+
   &::before {
     display: block;
     content: '';

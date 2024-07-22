@@ -988,6 +988,17 @@ header .container {
   display: flex;
   align-items: center;
   gap: 22px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.3333333333;
+  color: var(--main-text-color);
+}
+
+.footer-soc-link:hover,
+.footer-soc-link:focus {
+  color: var(--secondary-accent-color);
 }
 
 .footer-soc-link::before {
