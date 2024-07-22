@@ -1,0 +1,22 @@
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/hidden';
+
+@import './base/reset';
+@import './base/common';
+
+@import './components/container';
+@import './components/buttons';
+@import './components/mob-menu';
+
+@import './layout/header';
+@import './layout/hero';
+@import './layout/adventages';
+@import './layout/about';
+@import './layout/info.scss';
+@import './layout/certification';
+@import './layout/reasons';
+@import './layout/reviews';
+@import './layout/call-to-action';
+@import './layout/contacts';
+@import './layout/footer';

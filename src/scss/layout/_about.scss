@@ -1,0 +1,103 @@
+.about-section {
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.about-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  @include desktop {
+    gap: 80px;
+  }
+}
+
+.about-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+
+  @include desktop {
+    flex-direction: row;
+    gap: 47px;
+
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &:first-child {
+    &::before {
+      position: absolute;
+      top: -272px;
+      left: -725px;
+
+      height: 1461px;
+      width: 1093px;
+
+      display: block;
+      content: '';
+      background-image: url('@img/about/left-figure.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &:nth-child(2) {
+    &::after {
+      position: absolute;
+      top: -6px;
+      right: -732px;
+      z-index: -1;
+
+      width: 1093px;
+      height: 1461px;
+
+      display: block;
+      content: '';
+      background-image: url('@img/about/right-figure.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.about-item-content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 10px;
+}
+
+.about-top-title {
+  font-family: 'Rubik', sans-serif;
+  @include font(700, 32px, calc(50px / 48px));
+
+  color: var(--main-title-color);
+
+  @include desktop {
+    @include font(700, 48px, calc(50px / 48px));
+  }
+}
+
+.about-text {
+  @include font(400, 16px, calc(30px / 16px));
+  color: var(--main-text-color);
+  span {
+    font-weight: 700;
+    color: var(--main-text-color-bold);
+  }
+}
+
+.about-image-wrap {
+  z-index: 3;
+  flex-shrink: 0;
+  background-color: var(--img-bg-color);
+  border-radius: var(--img-radius);
+  overflow: hidden;
+  @include desktop {
+    width: 570px;
+  }
+}

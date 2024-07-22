@@ -1,0 +1,49 @@
+.certification-section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  & .container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    @include desktop {
+      flex-direction: row;
+      align-items: center;
+      gap: 87px;
+    }
+  }
+}
+
+.certification-top-text {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  @include font(400, 15px, calc(24px / 15px));
+  color: var(--main-text-color);
+
+  &::after {
+    display: block;
+    content: '';
+    width: 147px;
+    height: 1px;
+    background-color: var(--main-accent-color);
+  }
+}
+
+.certification-list {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 40px;
+
+  @include desktop {
+    gap: 100px;
+  }
+  & img {
+    height: 60px;
+    @include desktop {
+      height: 80px;
+      width: auto;
+    }
+  }
+}

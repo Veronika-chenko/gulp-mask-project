@@ -1,0 +1,130 @@
+.footer {
+  background-color: var(--footer-bg-color);
+}
+
+.footer-content-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 50px;
+
+  padding-top: 73px;
+  padding-bottom: 53px;
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer-logo-info-container {
+  @include desktop {
+    width: 322px;
+  }
+}
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 35px;
+}
+
+.footer-logo-img {
+  width: 120.75px;
+  height: 30px;
+  @include desktop {
+    width: 161px;
+    height: 40px;
+  }
+}
+
+.footer-text {
+  @include font(400, 15px, calc(20px / 15px));
+  color: var(--main-text-color);
+}
+
+.footer-top-title {
+  margin-bottom: 20px;
+  font-family: 'Rubik', sans-serif;
+  @include font(500, 20px, calc(30px / 20px));
+  color: var(--main-title-color);
+}
+
+.footer-link {
+  display: block;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  @include font(400, 15px, calc(20px / 15px));
+  color: var(--main-text-color);
+  &:hover,
+  &:focus {
+    color: var(--secondary-accent-color);
+  }
+
+  &.active {
+    color: var(--secondary-accent-color);
+  }
+
+  @include desktop {
+    display: inline-block;
+  }
+}
+
+.footer-soc-item {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.footer-soc-link {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  &::before {
+    display: block;
+    content: '';
+    width: 22px;
+    height: 22px;
+
+    background-repeat: no-repeat;
+  }
+  &.facebook {
+    &::before {
+      background-image: url('@img/icons/icons.svg#socials--facebook');
+    }
+  }
+  &.twitter {
+    &::before {
+      background-image: url('@img/icons/icons.svg#socials--twitter');
+    }
+  }
+  &.google-plus {
+    &::before {
+      background-image: url('@img/icons/icons.svg#socials--google-plus');
+    }
+  }
+  &.youtube {
+    &::before {
+      background-image: url('@img/icons/icons.svg#socials--youtube');
+    }
+  }
+  &.linkedin {
+    &::before {
+      background-image: url('@img/icons/icons.svg#socials--linkedin');
+    }
+  }
+}
+
+.footer-copyright {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  text-align: center;
+  @include font(400, 15px, calc(20px / 15px));
+
+  color: var(--main-text-color);
+  border-top: 1px solid #d9d9d9;
+
+  @include desktop {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}

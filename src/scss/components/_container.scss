@@ -1,0 +1,16 @@
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  @media screen and (min-width: 480px) and (max-width: 1199.98px) {
+    max-width: 480px;
+  }
+
+  @include desktop {
+    width: 1200px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
