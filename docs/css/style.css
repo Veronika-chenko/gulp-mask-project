@@ -76,7 +76,6 @@ main {
 
 a {
   text-decoration: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 ul {
@@ -182,10 +181,10 @@ button {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #fff;
+  background-color: var(--main-bg-color);
   opacity: 1;
   visibility: visible;
-  transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
+  transition: opacity var(--timing-function), visibility var(--timing-function);
 }
 
 .mob-menu.is-hidden {
@@ -200,6 +199,7 @@ button {
   align-items: flex-start;
   gap: 20px;
   padding-top: 32px;
+  padding-left: 60px;
 }
 
 .header-close-menu-btn {
@@ -223,9 +223,9 @@ button {
 .mob-nav-link {
   display: block;
   width: 50%;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  font-weight: 400;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-weight: 600;
   font-size: 20px;
   line-height: 1.1;
   color: var(--main-text-color);
@@ -735,7 +735,6 @@ header .container {
 }
 
 .review-section .container {
-  padding-right: 0;
   width: 100%;
 }
 
@@ -959,7 +958,7 @@ header .container {
   color: var(--main-title-color);
 }
 
-.footer-link {
+.footer-menu-link {
   display: block;
   padding-top: 6px;
   padding-bottom: 6px;
@@ -969,12 +968,12 @@ header .container {
   color: var(--main-text-color);
 }
 
-.footer-link:hover,
-.footer-link:focus {
+.footer-menu-link:hover,
+.footer-menu-link:focus {
   color: var(--secondary-accent-color);
 }
 
-.footer-link.active {
+.footer-menu-link.active {
   color: var(--secondary-accent-color);
 }
 
@@ -1067,6 +1066,10 @@ header .container {
 
   .info-connection-btn-wrap {
     border-right: 1px solid #ffffff;
+  }
+
+  .review-section .container {
+    padding-right: 0;
   }
 }
 
@@ -1328,7 +1331,7 @@ header .container {
     height: 40px;
   }
 
-  .footer-link {
+  .footer-menu-link {
     display: inline-block;
   }
 
